@@ -1,0 +1,147 @@
+{
+  "chats": [
+    {
+      "chat_id": "t-01",
+      "messages": [
+        {
+          "message_id": "t-01-1",
+          "question": "كم يستغرق إصدار دفتر العائلة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-02",
+      "messages": [
+        {
+          "message_id": "t-02-1",
+          "question": "عمري 17 وجوازي بايق عليه 3 شهور، كم رسوم التجديد؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-03",
+      "messages": [
+        {
+          "message_id": "t-03-1",
+          "question": "شو المطلوب لتجديد دفتر العائلة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-04",
+      "messages": [
+        {
+          "message_id": "t-04-1",
+          "question": "إذا توفي الأب والأم، مين بصير رب الأسرة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-05",
+      "messages": [
+        {
+          "message_id": "t-05-1",
+          "question": "أيهما أغلى: جواز بدل تالف ولا بدل فاقد؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-06",
+      "messages": [
+        {
+          "message_id": "t-06-1",
+          "question": "الباسبور خلص، شو بعمل؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-07",
+      "messages": [
+        {
+          "message_id": "t-07-1",
+          "question": "شو الأوراق المطلوبة لبطاقة ذكية بدل فاقد؟"
+        },
+        {
+          "message_id": "t-07-2",
+          "question": "وكم بتكلف؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-08",
+      "messages": [
+        {
+          "message_id": "t-08-1",
+          "question": "هويتي اهترت وابني عمره 10 سنين ضاع جوازه وإحنا بالأردن، وكمان مرتي بدها تجدد دفتر العائلة. قديش لازم ندفع لكل وحدة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-09",
+      "messages": [
+        {
+          "message_id": "t-09-1",
+          "question": "الزوجة لازم تجيب موافقة جوزها عشان تطلع جواز، صح؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-10",
+      "messages": [
+        {
+          "message_id": "t-10-1",
+          "question": "بدي أجدد، شو المطلوب؟"
+        },
+        {
+          "message_id": "t-10-2",
+          "question": "الهوية"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-11",
+      "messages": [
+        {
+          "message_id": "t-11-1",
+          "question": "كم رسوم تصديق الشهادة الجامعية؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-12",
+      "messages": [
+        {
+          "message_id": "t-12-1",
+          "question": "كم رسوم تجديد رخصة القيادة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-13",
+      "messages": [
+        {
+          "message_id": "t-13-1",
+          "question": "ضاعت هويتي للمرة الثالثة، شو بصير؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-14",
+      "messages": [
+        {
+          "message_id": "t-14-1",
+          "question": "How much does a damaged passport replacement cost?"
+        }
+      ]
+    },
+    {
+      "chat_id": "t-15",
+      "messages": [
+        {
+          "message_id": "t-15-1",
+          "question": "كم غرامة التأخير إذا ما طلعت هوية بعد ما صار عمري 18؟"
+        }
+      ]
+    }
+  ]
+}

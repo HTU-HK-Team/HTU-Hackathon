@@ -1,0 +1,4 @@
+# main.py (the graded entry point) needs NO packages - Python standard library only.
+# Optional extras:
+streamlit>=1.30      # chat_app.py - local chat UI
+openpyxl>=3.1        # eval/grid.py - Excel result sheets (falls back to CSV without it)

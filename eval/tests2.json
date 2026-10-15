@@ -1,0 +1,232 @@
+{
+  "chats": [
+    {
+      "chat_id": "u-01",
+      "expected": "25",
+      "messages": [
+        {
+          "message_id": "u-01-1",
+          "question": "كم رسوم جواز السفر لأول مرة لواحد عمره 14؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-02",
+      "expected": "100 (outside)",
+      "messages": [
+        {
+          "message_id": "u-02-1",
+          "question": "أنا مقيم بالسعودية وبدي أطلع جواز لأول مرة، قديش الرسوم؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-03",
+      "expected": "100; intentional damage -> investigation committee",
+      "messages": [
+        {
+          "message_id": "u-03-1",
+          "question": "جوازي تلف لأني غسلته بالغسالة، كم بكلف؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-04",
+      "expected": "250 + previous bail if <5 years",
+      "messages": [
+        {
+          "message_id": "u-04-1",
+          "question": "الجواز ضاع مني للمرة الثانية، قديش بدفع؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-05",
+      "expected": "5 + 10 JD pledge",
+      "messages": [
+        {
+          "message_id": "u-05-1",
+          "question": "ضاع دفتر العائلة أول مرة، كم الرسوم؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-06",
+      "expected": "smart ID; old book; not intentionally damaged",
+      "messages": [
+        {
+          "message_id": "u-06-1",
+          "question": "دفتر العائلة اهترى، شو الشروط؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-07",
+      "expected": "head of family or wife only",
+      "messages": [
+        {
+          "message_id": "u-07-1",
+          "question": "مين بقدر يقدم طلب دفتر عائلة بدل فاقد؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-08",
+      "expected": "yes 10 JD after 90 days; fee 2",
+      "messages": [
+        {
+          "message_id": "u-08-1",
+          "question": "تزوجت من 4 شهور وما فتحت دفتر عائلة، في غرامة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-09",
+      "expected": "20 min",
+      "messages": [
+        {
+          "message_id": "u-09-1",
+          "question": "كم يستغرق تجديد الهوية؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-10",
+      "expected": "yes; ID required only 16+; parent applies",
+      "messages": [
+        {
+          "message_id": "u-10-1",
+          "question": "ابني عمره 15 وما عنده هوية، بقدر يطلع جواز؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-11",
+      "expected": "no; only 2 weeks after police report + director approval",
+      "messages": [
+        {
+          "message_id": "u-11-1",
+          "question": "هويتي انسرقت، بستلم البطاقة الجديدة بنفس اليوم؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-12",
+      "expected": "2 vs 3",
+      "messages": [
+        {
+          "message_id": "u-12-1",
+          "question": "شو الفرق بين رسوم تجديد الهوية وبدل التالف؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-13",
+      "expected": "100 (>180 days left)",
+      "messages": [
+        {
+          "message_id": "u-13-1",
+          "question": "جوازي ساري لسنة كاملة وبدي أجدده، كم؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-14",
+      "expected": "20",
+      "messages": [
+        {
+          "message_id": "u-14-1",
+          "question": "My passport pages are full but it is still valid, how much to renew?"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-15",
+      "expected": "20",
+      "messages": [
+        {
+          "message_id": "u-15-1",
+          "question": "أنا عسكري وبدي أجدد جوازي، قديش؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-16",
+      "expected": "offices only; no embassy",
+      "messages": [
+        {
+          "message_id": "u-16-1",
+          "question": "وين بقدر أطلع هوية بدل تالف؟ السفارة بتعملها؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-17",
+      "expected": "docs list / 45 min",
+      "messages": [
+        {
+          "message_id": "u-17-1",
+          "question": "بدي أطلع جواز لأول مرة"
+        },
+        {
+          "message_id": "u-17-2",
+          "question": "شو الأوراق؟"
+        },
+        {
+          "message_id": "u-17-3",
+          "question": "وقديش بياخذ وقت؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-18",
+      "expected": "refuse",
+      "messages": [
+        {
+          "message_id": "u-18-1",
+          "question": "كم رسوم إصدار شهادة الميلاد؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-19",
+      "expected": "not available",
+      "messages": [
+        {
+          "message_id": "u-19-1",
+          "question": "بدي جواز دبلوماسي، شو المطلوب؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-20",
+      "expected": "ID damaged 3 + passport renewal <16 25 = 28",
+      "messages": [
+        {
+          "message_id": "u-20-1",
+          "question": "الهوية تبعتي خربت وبدي اطلع وحدة جديدة، وكمان بدي اجدد جواز ابني اللي عمره 12 وجوازه منتهي. قديش المجموع؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-21",
+      "expected": "50 JD judicial bail + previous pledges",
+      "messages": [
+        {
+          "message_id": "u-21-1",
+          "question": "شو بصير إذا ضاع دفتر العائلة للمرة الثالثة؟"
+        }
+      ]
+    },
+    {
+      "chat_id": "u-22",
+      "expected": "30 days",
+      "messages": [
+        {
+          "message_id": "u-22-1",
+          "question": "إذا تغيرت بيانات دفتر العائلة، خلال قديش لازم أبلغ؟"
+        }
+      ]
+    }
+  ]
+}

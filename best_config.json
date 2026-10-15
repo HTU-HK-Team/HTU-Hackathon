@@ -1,0 +1,7 @@
+{
+  "context": "full",
+  "style": "detailed",
+  "facts": true,
+  "temperature": 0.0,
+  "decompose": true
+}

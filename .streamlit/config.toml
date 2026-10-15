@@ -1,0 +1,2 @@
+[theme]
+primaryColor = "#1F6FEB"        # blue instead of Streamlit's default red (buttons, toggles, focus, links)
