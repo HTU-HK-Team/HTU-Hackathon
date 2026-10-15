@@ -629,13 +629,28 @@ def situation(question):
     return f
 
 
+CHAT_FACTS = {}          # situation facts from earlier messages of the same chat (set in generate)
+
+
+def merged_situation(question):
+    """Earlier facts of this chat + this message (this message wins). "شو لو عمري 16" keeps "3 months left"."""
+    new = situation(question)
+    f = dict(CHAT_FACTS)
+    if "expired" in new:
+        f.pop("days_left", None)
+    if "days_left" in new:
+        f.pop("expired", None)
+    f.update(new)
+    return f
+
+
 def user_facts(question):
-    f = situation(question)
+    f = merged_situation(question)
     facts = []
     if "age" in f:
         a = f["age"]
-        rel = lambda x: "أكبر من" if a > x else "أصغر من" if a < x else "يساوي"
-        facts.append(f"العمر {a} سنة: {rel(16)} 16 سنة، و{rel(18)} 18 سنة")
+        rel = lambda x: f"أتم {x} سنة (ليس دون {x})" if a >= x else f"أصغر من {x} سنة (دون {x})"
+        facts.append(f"العمر {a} سنة: {rel(16)}، و{rel(18)}")
     if "days_left" in f:
         d = f["days_left"]
         facts.append(f"المتبقي على صلاحية الوثيقة حوالي {d} يوماً، أي {'أقل' if d < 180 else 'أكثر'} من 180 يوماً، والوثيقة غير منتهية")
@@ -666,7 +681,7 @@ def _has(line, *words):
 
 def fee_lines(sid, services, question):
     """The fee line(s) of the data that apply to the user's situation, chosen in code. [] = let the model read all."""
-    f = situation(question)
+    f = merged_situation(question)
     fees = services[sid]["fields"].get("الرسوم", [])
     notes = services[sid]["fields"].get("ملاحظات", [])
     pick = lambda *w: [l for l in fees if _has(l, *w)]
@@ -743,8 +758,8 @@ SYSTEM_PART = ("\nالسؤال قد يتضمن عدة مواضيع أو أشخا
                "لا تجمع مبالغ خدمات أخرى.")
 
 
-def _fee_hint(question, sids, services):
-    t = norm(question)
+def _fee_hint(question, sids, services, prev_q=""):
+    t = norm(question + " " + prev_q)                    # follow-up "شو لو عمري 16" inherits "كم الرسوم"
     if not (FIELD_RX["الرسوم"].search(t) or re.search(norm(r"شو بعمل|شو اعمل|ماذا افعل|شو بصير|ماذا يحدث"), t)):
         return [], []
     lines, used = [], []
@@ -787,9 +802,20 @@ NUMBER_RETRY = {"ar": "\n\nتنبيه: الأرقام التالية في إجا
 
 def generate(question, sids, services, hist_msgs, en, focus=None):
     context, shown = build_context(question, sids, services)
+    CHAT_FACTS.clear()
+    for m in hist_msgs:                                  # facts the user gave earlier in this chat
+        if m["role"] == "user":
+            nf = situation(m["content"])
+            if "expired" in nf:
+                CHAT_FACTS.pop("days_left", None)
+            if "days_left" in nf:
+                CHAT_FACTS.pop("expired", None)
+            CHAT_FACTS.update(nf)
     facts = user_facts(focus["sub"] if focus else question) if CONFIG["facts"] else []
     hint_q = focus["sub"] if focus else question
-    hints, _ = _fee_hint(hint_q if wanted_fields(hint_q) else question, sids, services) if CONFIG["facts"] else ([], [])
+    prev_q = " ".join(m["content"] for m in hist_msgs if m["role"] == "user")
+    hints, _ = (_fee_hint(hint_q if wanted_fields(hint_q) else question, sids, services, prev_q)
+                if CONFIG["facts"] else ([], []))
     ask = question
     if focus:
         ask = focus["sub"] if wanted_fields(focus["sub"]) else question
